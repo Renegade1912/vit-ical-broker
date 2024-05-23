@@ -181,7 +181,7 @@ async function main() {
   console.log("Initialize calendar data ...");
   await fetchAllCalendars();
 
-  // Update the calendar data every 5 minutes
+  // Update the calendar data every minute
   cron.schedule("* * * * *", () => {
     console.log("Checking for updates ...");
     fetchAllCalendars();
