@@ -188,5 +188,4 @@ async function main() {
   });
 }
 
-// Initialize the calendar data
 main();
