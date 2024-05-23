@@ -93,7 +93,6 @@ function fetchAllCalendars(): Promise<void> {
         }
 
         // Hash of todays events to identify changes today
-
         const today = new Date();
         const todayString = `${("0" + today.getDate()).slice(-2)}.${(
           "0" +
@@ -114,6 +113,7 @@ function fetchAllCalendars(): Promise<void> {
     })
     .finally(() => {
       if (needsUpdate) {
+        needsUpdate = false;
         console.log("Updateing screens ...");
         updateScreens();
         return;
